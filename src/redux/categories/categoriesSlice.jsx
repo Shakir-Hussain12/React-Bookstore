@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   categories: [],
+  underConstruction: true,
 };
 
 const categoriesSlice = createSlice({
@@ -9,8 +10,8 @@ const categoriesSlice = createSlice({
   initialState,
   reducers: {
     checkStatus: (state) => {
-      state.categories.push('Under Construction');
-      return 'Under Construction';
+      state.underConstruction = false;
+      state.categories.push('Under construction');
     },
   },
 });
