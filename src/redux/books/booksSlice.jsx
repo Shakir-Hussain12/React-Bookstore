@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import bookList from '../../booklist';
+import bookList from '../../bookList';
 
 const initialState = {
   bookItems: bookList,
