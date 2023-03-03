@@ -1,19 +1,17 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import Button from '../components/Button';
+import Navbar from '../components/Navbar';
+import PopUp from '../components/Pop-Up';
 import { checkStatus } from '../redux/categories/categoriesSlice';
 
 export default function Categories() {
-  const dispatcher = useDispatch();
-
+  const { underConstruction, hideButton } = useSelector((store) => store.categories);
   return (
-    <button
-      className="cat-button"
-      type="button"
-      onClick={() => {
-        dispatcher(checkStatus());
-      }}
-    >
-      Check Status
-    </button>
+    <>
+      <Navbar />
+      {underConstruction && <PopUp />}
+      {!hideButton && <Button cName="cat-button" tVal="button" func={checkStatus()} Value="Check Status" />}
+    </>
   );
 }

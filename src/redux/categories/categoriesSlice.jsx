@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   categories: [],
-  underConstruction: true,
+  underConstruction: false,
+  hideButton: false,
 };
 
 const categoriesSlice = createSlice({
@@ -10,11 +11,17 @@ const categoriesSlice = createSlice({
   initialState,
   reducers: {
     checkStatus: (state) => {
+      state.hideButton = true;
+      state.underConstruction = true;
+      state.categories.push('Under construction');
+    },
+    showButton: (state) => {
+      state.hideButton = false;
       state.underConstruction = false;
       state.categories.push('Under construction');
     },
   },
 });
 
-export const { checkStatus } = categoriesSlice.actions;
+export const { checkStatus, showButton } = categoriesSlice.actions;
 export default categoriesSlice.reducer;
