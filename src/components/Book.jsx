@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/booksSlice';
+import { delBookItem } from '../redux/books/booksSlice';
 import Button from './Button';
 
-export default function Book({
-  id, title, author, category,
-}) {
+export default function Book({ book, id }) {
+  const { title, author, category } = book;
   return (
     <div className="Book-item">
       <p className="Book-details">
@@ -21,7 +20,7 @@ export default function Book({
         <Button
           cName="rem-button"
           tVal="button"
-          func={removeBook(id)}
+          func={delBookItem(id)}
           Value="Remove"
         />
       </p>
@@ -30,15 +29,19 @@ export default function Book({
 }
 
 Book.defaultProps = {
-  title: 'none',
-  author: 'none',
-  category: 'none',
-  id: 'none',
+  book: {
+    title: '',
+    author: '',
+    category: '',
+  },
+  id: '',
 };
 
 Book.propTypes = {
-  title: PropTypes.string,
-  author: PropTypes.string,
-  category: PropTypes.string,
+  book: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.string,
+    category: PropTypes.string,
+  }),
   id: PropTypes.string,
 };
