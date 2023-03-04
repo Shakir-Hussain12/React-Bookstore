@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://github.com/Shakir-Hussain12/React-Bookstore",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "linters": "eslint \"**/*.{js,jsx}\" & stylelint \"**/*.{css,scss}\"",
     "eslint": "eslint \"**/*.{js,jsx}\" --fix",
-    "style": "stylelint \"**/*.{css,scss}\" --fix"
+    "style": "stylelint \"**/*.{css,scss}\" --fix",
+    "deploy" : "npm run build & gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
