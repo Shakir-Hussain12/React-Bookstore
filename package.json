@@ -12,6 +12,9 @@
     "style": "stylelint \"**/*.{css,scss}\" --fix"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.11",
     "@reduxjs/toolkit": "^1.9.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -35,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",

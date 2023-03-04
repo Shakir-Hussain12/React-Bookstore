@@ -156,7 +156,7 @@ Feel free to check the [issues page](../../issues/).
 <!-- Acknowledgment -->
 ## Acknowledgments <a name="acknowledgements"></a>
 
-- Project is inspired by original design from Microverse.
+  > Project is inspired by original design from Microverse which you can be found [Here](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,14 +1,15 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import './Home.css';
 
 export default function Home() {
   return (
     <div className="Homepage">
       <Navbar />
       <div className="content">
-        <h3>
+        <h1>
           Welcome To the official Bookstore of Microverse
-        </h3>
+        </h1>
       </div>
     </div>
   );

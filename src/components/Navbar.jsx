@@ -1,5 +1,7 @@
+import { Avatar, IconButton } from '@mui/material';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
 export default function Navbar() {
   return (
@@ -9,7 +11,7 @@ export default function Navbar() {
           className={(link) => (link.isActive ? 'link active' : 'link')}
           to="/"
         >
-          Bookstore
+          Bookstore CMS
         </NavLink>
       </div>
       <ul className="nav-links">
@@ -30,6 +32,9 @@ export default function Navbar() {
           </NavLink>
         </li>
       </ul>
+      <IconButton>
+        <Avatar alt="profile picture">Hi</Avatar>
+      </IconButton>
     </nav>
   );
 }
