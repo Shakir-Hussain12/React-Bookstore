@@ -2,8 +2,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const defFunc = () => 'none';
-
 const Button = (props) => {
   const dispatcher = useDispatch();
   const {
@@ -19,14 +17,14 @@ const Button = (props) => {
 Button.defaultProps = {
   cName: 'none',
   tVal: 'none',
-  func: defFunc,
+  func: { name: 'Shakir' },
   Value: 'none',
 };
 
 Button.propTypes = {
   cName: PropTypes.string,
   tVal: PropTypes.string,
-  func: PropTypes.objectOf(PropTypes.shape()),
+  func: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
   Value: PropTypes.string,
 };
 

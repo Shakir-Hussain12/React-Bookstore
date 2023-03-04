@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const categoriesSlice = createSlice({
-  name: 'Categories',
+  name: 'categories',
   initialState,
   reducers: {
     checkStatus: (state) => {
@@ -18,7 +18,7 @@ const categoriesSlice = createSlice({
     showButton: (state) => {
       state.hideButton = false;
       state.underConstruction = false;
-      state.categories.push('Under construction');
+      state.categories.pop('Under construction');
     },
   },
 });

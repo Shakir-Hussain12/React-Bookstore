@@ -1,26 +1,27 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Form from '../components/Form';
 import Book from '../components/Book';
 import Navbar from '../components/Navbar';
+import { getBookItems } from '../redux/books/booksSlice';
 
 export default function Books() {
-  const { bookItems } = useSelector((store) => store.books);
+  const { bookItems, loading } = useSelector((store) => store.books);
+  const dispatcher = useDispatch();
+  const keys = Object.keys(bookItems);
+  useEffect(() => {
+    if (!loading) {
+      dispatcher(getBookItems());
+    }
+  }, [dispatcher, loading]);
+
   return (
     <>
       <Navbar />
       <div className="books">
         {
-        bookItems.map((item) => (
-          <Book
-            key={item.id}
-            id={item.id}
-            title={item.title}
-            author={item.author}
-            category={item.category}
-          />
-        ))
-      }
+          keys.map((key) => (<Book key={key} book={bookItems[key][0]} id={key} />))
+        }
         <Form />
       </div>
     </>
