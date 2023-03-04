@@ -1,128 +1,127 @@
 html,
 body {
-    min-height: 100vh;
-    background-repeat: repeat;
-    background-color: white;
+  min-height: 100vh;
+  background-repeat: repeat;
+  background-color: white;
 }
 
 .books {
-    margin: 0;
-    padding: 5% 0;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .Book-item {
-    list-style: none;
-    padding: 0 2%;
-    margin: 2% 0;
+  list-style: none;
+  padding: 0 2%;
+  margin: 2% 0;
 }
 
 .Book-details {
-    min-height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 5%;
+  min-height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5%;
 }
 
 .inner-content * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .cat {
-    color: rgb(150, 146, 146);
+  color: rgb(150, 146, 146);
 }
 
 .author {
-    color: rgb(147, 147, 247);
+  color: rgb(147, 147, 247);
 }
 
 .Buttons {
-    margin-top: 5%;
-    min-width: 300px;
+  margin-top: 5%;
+  min-width: 300px;
 }
 
 .Buttons * {
-    background: none;
-    color: blue;
-    padding: 3%;
-    padding-inline-start: 0;
-    border: none;
-}
-
-.Buttons *:focus {
-    outline: none;
+  background: none;
+  color: blue;
+  padding: 3%;
+  padding-inline-start: 0;
+  border: none;
 }
 
 .progress-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 22%;
 }
 
 .percent {
-    display: block;
-    font-size: 40px;
+  display: block;
+  font-size: 40px;
 }
 
 .circle {
-    height: 100px !important;
-    width: 100px !important;
+  height: 100px !important;
+  width: 100px !important;
 }
 
 .additional {
-    border-left: 1px solid lightgray;
-    padding-inline-start: 5%;
-    text-align: left;
-    text-transform: uppercase;
+  border-left: 1px solid lightgray;
+  padding-inline-start: 5%;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .cat-page {
-    min-height: 50vh;
-    text-align: center;
+  min-height: 50vh;
+  text-align: center;
 }
 
 .cat-page > button {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .additional button,
 .form-content button {
-    background-color: blue !important;
+  background-color: blue !important;
 }
 
 .form-title {
-    color: darkgray;
+  color: darkgray;
 }
 
 #myForm > h1 {
-    padding-inline-start: 2%;
+  padding-inline-start: 2%;
 }
 
 .form-content {
-    padding-inline-start: 5%;
-    display: flex;
-    align-items: center;
-    margin-top: 6%;
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 95%;
-    justify-content: space-around;
+  padding-inline-start: 5%;
+  display: flex;
+  align-items: center;
+  margin-top: 6%;
+  flex-wrap: wrap;
+  min-width: 95%;
+  justify-content: space-around;
 }
 
 .form-content * {
-    min-width: 10%;
+  min-width: 10%;
 }
 
 #book-author,
 #book-title {
-    width: 400px;
+  width: 400px;
 }
 
 .form-content > button {
-    margin-top: 2%;
-    width: 20%;
+  margin-top: 2%;
+  width: 20%;
+}
+
+.Buttons *:focus {
+  outline: none;
 }
