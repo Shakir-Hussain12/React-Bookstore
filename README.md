@@ -78,7 +78,7 @@ This project was built using these technologies.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Still in progress....
+[Live Demo](https://jolly-clafoutis-fc42c6.netlify.app)
 <!-- - [Here]() -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
